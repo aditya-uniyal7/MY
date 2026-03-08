@@ -1,0 +1,26 @@
+class Door:
+    def __init__(self,passw):
+        self.passw=passw
+        self.locked=True
+    def unlock(self,password):
+        if not self.locked:
+            print("already unlocked")
+        elif self.passw==password:
+            print("ok now te door is unlocked")
+            self.locked=False
+        else:
+            print("wrog password")
+    def lock(self,password):
+        if self.locked:
+            print("already locked")
+            
+        elif self.passw==password:
+            print("yeah its lockd")
+            
+        else:
+            print("wrog password")
+        
+            
+d=Door(123)
+d.unlock(123)
+d.lock(123)
