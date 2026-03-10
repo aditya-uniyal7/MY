@@ -1,0 +1,14 @@
+import random as rn
+import statistics as st
+
+numbers=[]
+while len(numbers)<3:
+    num=rn.randint(100,999)
+    if num%5==0:
+        numbers.append(num)
+print(numbers)
+
+mean=st.mean(numbers)
+median=st.median(numbers)  
+mode=st.mode(numbers)
+print(mean,mode,median)
