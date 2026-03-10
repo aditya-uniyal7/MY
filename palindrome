@@ -1,0 +1,9 @@
+str=input("enter the line")
+text=str[::-1]
+if str==text:
+    print("its a palindrome")
+    len=len(str)
+    for i in range(len):
+        print(str)
+else:
+    print("not a palindrome")
