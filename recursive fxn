@@ -1,0 +1,28 @@
+def sum_of_digits(n):
+    # Base case: if n is 0, sum is 0
+    if n == 0:
+        return 0
+    return (n % 10) + sum_of_digits(n // 10)
+
+def reverse_number(n, temp=0):
+    # Base case: if n is 0, return the accumulated reversed number
+    if n == 0:
+        return temp
+    # Shift temp left and add the last digit
+    return reverse_number(n // 10, temp * 10 + n % 10)
+
+def decimal_to_binary(n):
+    # Base case: if n is 0, return empty string
+    if n == 0:
+        return ""
+    return decimal_to_binary(n // 10) + str(n % 2)
+
+# Testing the functions
+num = 1234
+print(f"Number: {num}")
+print(f"Sum of Digits: {sum_of_digits(num)}")
+print(f"Reverse of Number: {reverse_number(num)}")
+
+# Binary check (handling 0 explicitly as a special case)
+binary_val = decimal_to_binary(num) if num > 0 else "0"
+print(f"Binary of Number: {binary_val}")
