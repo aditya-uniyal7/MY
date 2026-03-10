@@ -1,0 +1,9 @@
+sent=input("enter the line").lower()
+word=sent.split()
+for words in word:
+    vowels="aeiou"
+    counter=0
+    for char in words:
+        if char in vowels:
+            counter=counter+1
+    print(words,counter)
